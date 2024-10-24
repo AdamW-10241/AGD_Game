@@ -41,7 +41,7 @@ protected:
 
 	int CharacterLevel;
 
-	UPROPERTY(EditDefaultsOnly, Category = Level)
+	UPROPERTY(EditAnywhere, Category = Level)
 	int Experience;
 
 	UPROPERTY(EditDefaultsOnly, Category = Level)
