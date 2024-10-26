@@ -15,9 +15,21 @@ public:
 	// Sets default values for this character's properties
 	AAGDCharacter();
 
+	// Face the other actor
+	UFUNCTION(BlueprintCallable, Category = Actor)
+	void FaceOtherActor(AActor* OtherActor);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	// On Death
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = Character)
+	void OnCharacterDeath();
+
+	// On Hit
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = Character)
+	void OnCharacterHurt();
 
 public:	
 	// Called every frame
