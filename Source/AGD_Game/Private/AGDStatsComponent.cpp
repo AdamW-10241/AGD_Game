@@ -119,7 +119,11 @@ void UAGDStatsComponent::AddExperience(int Amount)
 	// Adding amount to experience and clamping
 	int NewExperience = FMath::Clamp(Experience + Amount, 0, GetMaxExperience());
 
+	// Set the new experience amount
 	SetExperience(NewExperience);
+
+	// Call implementable experience function
+	OnAddExperience(NewExperience);
 }
 
 void UAGDStatsComponent::SetExperience(int NewExperience)

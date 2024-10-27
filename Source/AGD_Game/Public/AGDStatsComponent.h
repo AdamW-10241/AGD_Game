@@ -97,6 +97,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Level)
 	void AddExperience(int Amount);
 
+	UFUNCTION(BlueprintImplementableEvent, Category = Level)
+	void OnAddExperience(int Amount);
+
 	UFUNCTION(BlueprintCallable, Category = Level)
 	void SetExperience(int NewExperience);
 	
