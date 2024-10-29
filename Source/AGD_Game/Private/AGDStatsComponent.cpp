@@ -25,6 +25,10 @@ UAGDStatsComponent::UAGDStatsComponent()
 
 	CharacterLevel = 0;
 	Experience = 0;
+
+	GearAttackSpeed = 0.0f;
+	GearHealth = 0.0f;
+	GearDamage = 0;
 	
 	// Set experience per level
 	for (int i = 1; i < 10; i++) {
@@ -38,8 +42,8 @@ UAGDStatsComponent::UAGDStatsComponent()
 void UAGDStatsComponent::BeginPlay()
 {	
 	// Set the health and stamina variables to max
-	Health = MaxHealth;
-	Stamina = MaxStamina;
+	Health = GetMaxHealth();
+	Stamina = GetMaxStamina();
 	
 	Super::BeginPlay();
 
@@ -62,11 +66,11 @@ int UAGDStatsComponent::GetMaxExperience()
 
 void UAGDStatsComponent::HandleLevelUp()
 {
-	SetMaxHealth(MaxHealth * 2);
-	SetHealth(MaxHealth);
+	SetMaxHealth(MaxHealth * 2);	
+	SetHealth(GetMaxHealth());
 	
 	SetMaxStamina(MaxStamina + 10);
-	SetStamina(MaxStamina);
+	SetStamina(GetMaxStamina());
 
 	int NewMinDamage = MinBaseDamage + 5;
 	int NewMaxDamage = NewMinDamage + (3 + CharacterLevel);

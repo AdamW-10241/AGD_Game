@@ -36,6 +36,26 @@ protected:
 	int AttackCombo;
 
 public:
+	// Gear Meshes
+	// Using the default mesh as head
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	USkeletalMeshComponent* UpperBodyComponent;
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	USkeletalMeshComponent* LowerBodyComponent;
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	USkeletalMeshComponent* HandsComponent;
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	USkeletalMeshComponent* FeetComponent;
+
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	USkeletalMeshComponent* WeaponComponent;
+
+	UPROPERTY(EditDefaultsOnly, Category = Weapon)
+	FName WeaponSocket;
+
 	/* Set the boolean attack allowed */
 	UFUNCTION(BlueprintCallable, Category = Combat)
 	void SetAttackAllowed(bool bAllowAttack);

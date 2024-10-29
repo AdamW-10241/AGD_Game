@@ -47,15 +47,42 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = Level)
 	TArray<int> ExperiencePerLevel;
 
+	// Gear Variables
+	float GearHealth;
+
+	float GearAttackSpeed;
+
+	int GearDamage;
+
 	int GetMaxExperience();
 
 	void HandleLevelUp();
 
 	bool bStatsInitialised;
 
-public:	
+public:
+	// Gear Functions
+	UFUNCTION(BlueprintPure, Category = "Gear Stats")
+	float GetGearHealth() const { return GearHealth; }
+
+	UFUNCTION(BlueprintCallable, Category = "Gear Stats")
+	void SetGearHealth(float NewHealth) { GearHealth = NewHealth; }
+	
+	UFUNCTION(BlueprintPure, Category = "Gear Stats")
+	float GetGearAttackSpeed() const { return GearAttackSpeed; }
+
+	UFUNCTION(BlueprintCallable, Category = "Gear Stats")
+	void SetGearAttackSpeed(float NewAttackSpeed) { GearAttackSpeed = NewAttackSpeed; }
+	
+	UFUNCTION(BlueprintPure, Category = "Gear Stats")
+	int GetGearDamage() const { return GearDamage; }
+	
+	UFUNCTION(BlueprintCallable, Category = "Gear Stats")
+	void SetGearDamage(float NewDamage) { GearDamage = NewDamage; }
+
+	// Stat Functions
 	UFUNCTION(BlueprintPure, Category = Health)
-	float GetMaxHealth() const { return MaxHealth; }
+	float GetMaxHealth() const { return MaxHealth + GearHealth; }
 
 	UFUNCTION(BlueprintCallable, Category = Health)
 	void SetMaxHealth(float NewMax) { MaxHealth = NewMax; }
@@ -79,13 +106,13 @@ public:
 	void SetStamina(float NewStamina) { Stamina = NewStamina; }
 
 	UFUNCTION(BlueprintPure, Category = Damage)
-	int GetBaseDamage() const { return FMath::RandRange(MinBaseDamage, MaxBaseDamage); }
+	int GetBaseDamage() const { return FMath::RandRange(MinBaseDamage, MaxBaseDamage) + GearDamage; }
 
 	UFUNCTION(BlueprintCallable, Category = Damage)
 	void SetBaseDamage(int Min, int Max) { MinBaseDamage = Min; MaxBaseDamage = Max; }
 
 	UFUNCTION(BlueprintPure, Category = "Additional Stats")
-	float GetAttackSpeed() const { return AttackSpeed; }
+	float GetAttackSpeed() const { return AttackSpeed + GearAttackSpeed; }
 
 	UFUNCTION(BlueprintCallable, Category = "Additional Stats")
 	void SetAttackSpeed(float newAttackSpeed) { AttackSpeed = newAttackSpeed; }

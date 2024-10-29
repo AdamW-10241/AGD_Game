@@ -13,6 +13,26 @@ AAGDPlayerCharacter::AAGDPlayerCharacter()
 	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	CameraComponent->SetupAttachment(SpringArmComponent);
 
+	UpperBodyComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Upper Body"));
+	UpperBodyComponent->SetupAttachment(GetMesh());
+	UpperBodyComponent->SetMasterPoseComponent(GetMesh());
+	
+	LowerBodyComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Lower Body"));
+	LowerBodyComponent->SetupAttachment(GetMesh());
+	LowerBodyComponent->SetMasterPoseComponent(GetMesh());
+	
+	HandsComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Hands"));
+	HandsComponent->SetupAttachment(GetMesh());
+	HandsComponent->SetMasterPoseComponent(GetMesh());
+	
+	FeetComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Feet"));
+	FeetComponent->SetupAttachment(GetMesh());
+	FeetComponent->SetMasterPoseComponent(GetMesh());
+
+	WeaponSocket = FName("Hand_R");
+	WeaponComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Weapon"));
+	WeaponComponent->SetupAttachment(GetMesh(), WeaponSocket);
+
 	bAttackAllowed = true;
 	bForceRotate = false;
 
