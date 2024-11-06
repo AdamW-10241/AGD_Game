@@ -2,6 +2,9 @@
 
 
 #include "Loot/AGDArmourLoot.h"
+#include "Kismet/GameplayStatics.h"
+#include "Characters/AGDPlayerCharacter.h"
+#include "AGDStatsComponent.h"
 
 AAGDArmourLoot::AAGDArmourLoot()
 {
@@ -16,4 +19,46 @@ void AAGDArmourLoot::EquipLoot()
 {
 	Super::EquipLoot();
 
+	// Get the player
+	ACharacter* PCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
+	// Cast to custom character
+	AAGDPlayerCharacter* AGDCharacter = Cast<AAGDPlayerCharacter>(PCharacter);
+
+	// If character is not AAGDPlayerCharacter, end function
+	if (!IsValid(AGDCharacter)) {
+		return;
+	}
+
+	if (IsValid(GearMesh)) {
+		// Switch depending on assigned armor type
+		switch (ArmourType) {
+		case EArmourType::Head :
+			AGDCharacter->GetMesh()->SetSkeletalMesh(GearMesh);
+			break;
+		case EArmourType::UpperBody :
+			AGDCharacter->UpperBodyComponent->SetSkeletalMesh(GearMesh);
+			break;
+		case EArmourType::LowerBody:
+			AGDCharacter->LowerBodyComponent->SetSkeletalMesh(GearMesh);
+			break;
+		case EArmourType::Hands:
+			AGDCharacter->HandsComponent->SetSkeletalMesh(GearMesh);
+			break;
+		case EArmourType::Feet:
+			AGDCharacter->FeetComponent->SetSkeletalMesh(GearMesh);
+			break;
+		default:
+			break;
+		}
+	}
+
+	// Get the stats component
+	UAGDStatsComponent* AGDStats = AGDCharacter->FindComponentByClass<UAGDStatsComponent>();
+
+	// If stats component valid, change stats
+	if (IsValid(AGDStats)) {
+		// Make suure to add to health and not set it directly
+		AGDStats->SetGearHealth(AGDStats->GetGearHealth() + Health);
+		AGDStats->SetGearAttackSpeed(AGDStats->GetGearAttackSpeed() + AttackSpeed);
+	}
 }

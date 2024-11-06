@@ -6,6 +6,15 @@
 #include "GameFramework/Actor.h"
 #include "AGDLoot.generated.h"
 
+UENUM(BlueprintType)
+enum ERarity {
+	Common,
+	Uncommon,
+	Rare,
+	Epic,
+	Legendary
+};
+
 UCLASS()
 class AGD_GAME_API AAGDLoot : public AActor
 {
@@ -20,7 +29,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditDefaultsOnly, Category = Loot)
-	int Rarity;
+	TEnumAsByte<ERarity> Rarity;
 
 	UPROPERTY(EditDefaultsOnly, Category = Loot)
 	int GearScore;
