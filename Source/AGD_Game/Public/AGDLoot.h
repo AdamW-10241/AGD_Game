@@ -43,5 +43,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = Loot)
 	USkeletalMesh* GearMesh;
 
-	virtual void EquipLoot();
+	virtual void EquipLoot() {}
+
+	UFUNCTION(BlueprintCallable, Category = Loot)
+	virtual void UnEquipLoot() {}
 };

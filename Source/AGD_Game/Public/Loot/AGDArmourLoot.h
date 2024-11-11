@@ -36,5 +36,10 @@ public:
 	TEnumAsByte<EArmourType> ArmourType;
 
 protected:
+	UPROPERTY(EditDefaultsOnly, Category = Armour)
+	USkeletalMesh* DefaultMesh;
+	
 	virtual void EquipLoot() override;
+
+	virtual void UnEquipLoot() override;
 };

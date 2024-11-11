@@ -22,4 +22,6 @@ public:
 
 protected:
 	virtual void EquipLoot() override;
+
+	virtual void UnEquipLoot() override;
 };

@@ -24,7 +24,3 @@ void AAGDLoot::BeginPlay()
 	EquipLoot();
 }
 
-void AAGDLoot::EquipLoot()
-{
-}
-

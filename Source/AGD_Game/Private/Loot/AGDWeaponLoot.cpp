@@ -38,3 +38,22 @@ void AAGDWeaponLoot::EquipLoot()
 		}
 	}
 }
+
+void AAGDWeaponLoot::UnEquipLoot()
+{
+	Super::UnEquipLoot();
+
+	// Gets the player as a default character class
+	ACharacter* PCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
+	// Casts to our AGD player character class
+	AAGDPlayerCharacter* AGDCharacter = Cast<AAGDPlayerCharacter>(PCharacter);
+
+	// Make sure the player character is of the AGD class
+	if (IsValid(AGDCharacter)) {
+		// Check if skeletal mesh is assigned
+		if (AGDCharacter->WeaponComponent->SkeletalMesh != nullptr) {
+			// Remove mesh if assigned
+			AGDCharacter->WeaponComponent->SetSkeletalMesh(nullptr);
+		}
+	}
+}

@@ -62,3 +62,51 @@ void AAGDArmourLoot::EquipLoot()
 		AGDStats->SetGearAttackSpeed(AGDStats->GetGearAttackSpeed() + AttackSpeed);
 	}
 }
+
+void AAGDArmourLoot::UnEquipLoot()
+{
+	Super::UnEquipLoot();
+
+	// Get the player
+	ACharacter* PCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
+	// Cast to custom character
+	AAGDPlayerCharacter* AGDCharacter = Cast<AAGDPlayerCharacter>(PCharacter);
+
+	// If character is not AAGDPlayerCharacter, end function
+	if (!IsValid(AGDCharacter)) {
+		return;
+	}
+
+	if (IsValid(DefaultMesh)) {
+		// Switch depending on assigned armor type
+		switch (ArmourType) {
+		case EArmourType::Head:
+			AGDCharacter->GetMesh()->SetSkeletalMesh(DefaultMesh);
+			break;
+		case EArmourType::UpperBody:
+			AGDCharacter->UpperBodyComponent->SetSkeletalMesh(DefaultMesh);
+			break;
+		case EArmourType::LowerBody:
+			AGDCharacter->LowerBodyComponent->SetSkeletalMesh(DefaultMesh);
+			break;
+		case EArmourType::Hands:
+			AGDCharacter->HandsComponent->SetSkeletalMesh(DefaultMesh);
+			break;
+		case EArmourType::Feet:
+			AGDCharacter->FeetComponent->SetSkeletalMesh(DefaultMesh);
+			break;
+		default:
+			break;
+		}
+	}
+
+	// Get the stats component
+	UAGDStatsComponent* AGDStats = AGDCharacter->FindComponentByClass<UAGDStatsComponent>();
+
+	// If stats component valid, change stats
+	if (IsValid(AGDStats)) {
+		// Make suure to add to health and not set it directly
+		AGDStats->SetGearHealth(AGDStats->GetGearHealth() - Health);
+		AGDStats->SetGearAttackSpeed(AGDStats->GetGearAttackSpeed() - AttackSpeed);
+	}
+}
