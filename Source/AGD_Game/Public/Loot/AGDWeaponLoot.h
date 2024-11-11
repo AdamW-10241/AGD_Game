@@ -16,10 +16,10 @@ class AGD_GAME_API AAGDWeaponLoot : public AAGDLoot
 	
 public:
 	AAGDWeaponLoot();
-
-protected:
-	UPROPERTY(EditDefaultsOnly, Category=Weapon)
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Weapon, meta = (ExposeOnSpawn))
 	int Damage;
 
+protected:
 	virtual void EquipLoot() override;
 };

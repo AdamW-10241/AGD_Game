@@ -26,15 +26,15 @@ class AGD_GAME_API AAGDArmourLoot : public AAGDLoot
 public:
 	AAGDArmourLoot();
 
-protected:
-	UPROPERTY(EditDefaultsOnly, Category = Armour)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Armour, meta = (ExposeOnSpawn))
 	float Health;
 
-	UPROPERTY(EditDefaultsOnly, Category = Armour)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Armour, meta = (ExposeOnSpawn))
 	float AttackSpeed;
 
-	UPROPERTY(EditDefaultsOnly, Category = Armour)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Armour)
 	TEnumAsByte<EArmourType> ArmourType;
 
+protected:
 	virtual void EquipLoot() override;
 };

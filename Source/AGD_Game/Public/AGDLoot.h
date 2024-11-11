@@ -24,21 +24,21 @@ public:
 	// Sets default values for this actor's properties
 	AAGDLoot();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Loot, meta = (ExposeOnSpawn))
+	TEnumAsByte<ERarity> Rarity;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Loot, meta = (ExposeOnSpawn))
+	int GearScore;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Loot)
+	FString DisplayName;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Loot)
+	FString Description;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	UPROPERTY(EditDefaultsOnly, Category = Loot)
-	TEnumAsByte<ERarity> Rarity;
-
-	UPROPERTY(EditDefaultsOnly, Category = Loot)
-	int GearScore;
-
-	UPROPERTY(EditDefaultsOnly, Category = Loot)
-	FString DisplayName;
-
-	UPROPERTY(EditDefaultsOnly, Category = Loot)
-	FString Description;
 
 	UPROPERTY(EditDefaultsOnly, Category = Loot)
 	USkeletalMesh* GearMesh;
