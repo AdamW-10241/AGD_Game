@@ -47,9 +47,8 @@ void UAGDStatsComponent::BeginPlay()
 	
 	Super::BeginPlay();
 
-	UpdateLevel();
-
-	bStatsInitialised = true;
+	// Initialise our stats and allow visual level up
+	InitialiseStats();
 }
 
 int UAGDStatsComponent::GetMaxExperience()
@@ -81,6 +80,17 @@ void UAGDStatsComponent::HandleLevelUp()
 	
 	// Run the blueprint event and pass through values
 	OnLevelUp(CharacterLevel, bStatsInitialised);
+}
+
+void UAGDStatsComponent::InitialiseStats(bool bInitialise)
+{
+	bStatsInitialised = false;
+
+	if (bInitialise) {
+		UpdateLevel();
+
+		bStatsInitialised = true;
+	}
 }
 
 void UAGDStatsComponent::UpdateLevel()

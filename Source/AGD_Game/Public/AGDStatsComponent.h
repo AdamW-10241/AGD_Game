@@ -61,6 +61,9 @@ protected:
 	bool bStatsInitialised;
 
 public:
+	UFUNCTION(BlueprintCallable, Category=Initialisation)
+	void InitialiseStats(bool bInitialise = true);
+
 	// Gear Functions
 	UFUNCTION(BlueprintPure, Category = "Gear Stats")
 	float GetGearHealth() const { return GearHealth; }
