@@ -15,7 +15,7 @@ public:
 	AAGDEnemyCharacter() { AttackRange = 200.0f; }
 
 protected:
-	UPROPERTY(EditDefaultsOnly, Category = "Alternate Stats")
+	UPROPERTY(EditAnywhere, Category = "Alternate Stats")
 	float AttackRange;
 
 public:
