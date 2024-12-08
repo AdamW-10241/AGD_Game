@@ -150,11 +150,12 @@ void UAGDStatsComponent::SetExperience(int NewExperience)
 	UpdateLevel();
 }
 
-void UAGDStatsComponent::GetDisplayLevelInfo(int& DisplayLevel, int& DisplayExperience)
+void UAGDStatsComponent::GetDisplayLevelInfo(int& DisplayLevel, int& DisplayMaxLevel, int& DisplayExperience)
 {
 	// Add 1 to the level for a more readible character level
 	DisplayLevel = CharacterLevel + 1;
 	DisplayExperience = Experience;
+	DisplayMaxLevel = CharacterMaxLevel + 1;
 
 	// If character is level 1, end the function
 	if (CharacterLevel <= 0) {

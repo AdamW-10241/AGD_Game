@@ -47,6 +47,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = Level)
 	TArray<int> ExperiencePerLevel;
 
+	UPROPERTY(EditDefaultsOnly, Category = Level)
+	int CharacterMaxLevel;
+
 	// Gear Variables
 	float GearHealth;
 
@@ -137,13 +140,14 @@ public:
 	void OnLevelUp(int Level, bool bAreStatsInitialised);
 
 	UFUNCTION(BlueprintPure, Category = Level)
-	void GetTrueLevelInfo(int& TrueLevel, int& TrueExperience) {
+	void GetTrueLevelInfo(int& TrueLevel, int& TrueMaxLevel, int& TrueExperience) {
 		TrueLevel = CharacterLevel;
+		TrueMaxLevel = CharacterMaxLevel;
 		TrueExperience = Experience;
 	}
 
 	UFUNCTION(BlueprintPure, Category = Level)
-	void GetDisplayLevelInfo(int& DisplayLevel, int& DisplayExperience);
+	void GetDisplayLevelInfo(int& DisplayLevel, int& DisplayMaxLevel, int& DisplayExperience);
 
 	UFUNCTION(BlueprintPure, Category = Level)
 	TArray<int> GetExperiencePerLevel() const { return ExperiencePerLevel; }
