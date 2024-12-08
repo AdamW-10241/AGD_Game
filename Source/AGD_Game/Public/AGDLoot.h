@@ -36,6 +36,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Loot)
 	FString Description;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Loot)
+	FTransform RelativeTransform;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

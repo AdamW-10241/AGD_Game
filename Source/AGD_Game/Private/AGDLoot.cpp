@@ -14,6 +14,7 @@ AAGDLoot::AAGDLoot()
 	DisplayName = TEXT("Loot Name");
 	Description = TEXT("Loot Description");
 	GearMesh = nullptr;
+	RelativeTransform = FTransform(FQuat(FRotator(0.0f, 0.0f, 0.0f)), FVector(0.0f, 0.0f, 0.0f), FVector(1.0f, 1.0f, 1.0f));
 }
 
 // Called when the game starts or when spawned

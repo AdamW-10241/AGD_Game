@@ -27,6 +27,7 @@ void AAGDWeaponLoot::EquipLoot()
 		// Check that we have a mesh assigned
 		if (IsValid(GearMesh)) {
 			AGDCharacter->WeaponComponent->SetSkeletalMesh(GearMesh);
+			AGDCharacter->WeaponComponent->SetRelativeTransform(RelativeTransform);
 		}
 
 		// Find the stats component
