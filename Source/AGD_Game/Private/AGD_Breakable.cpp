@@ -12,7 +12,7 @@ AAGD_Breakable::AAGD_Breakable()
 
 	// Add box collision
 	BoxOverlap = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Collision"));
-	BoxOverlap->SetupAttachment(RootComponent);
+	SetRootComponent(BoxOverlap);
 
 	// Enable overlap collision
 	BoxOverlap->SetCollisionEnabled(ECollisionEnabled::QueryOnly);

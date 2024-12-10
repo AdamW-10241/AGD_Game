@@ -17,6 +17,9 @@ public:
 	// Sets default values for this actor's properties
 	ABP_Pickup();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pickup)
+	FString PickupIndex;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
