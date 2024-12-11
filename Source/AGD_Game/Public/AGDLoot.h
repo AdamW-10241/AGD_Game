@@ -39,12 +39,12 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Loot)
 	FTransform RelativeTransform;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Loot)
+	USkeletalMesh* GearMesh;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	UPROPERTY(EditDefaultsOnly, Category = Loot)
-	USkeletalMesh* GearMesh;
 
 	virtual void EquipLoot() {}
 

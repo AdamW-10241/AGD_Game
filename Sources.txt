@@ -32,3 +32,5 @@ Dragon vocals:
 	Alien Snake Roars Sound.ogg by Mastersoundboy2005 -- https://freesound.org/s/678485/ -- License: Creative Commons 0
 Magic door:
 	https://freesound.org/people/NoahBangs/sounds/636087/?
+Drop/Pickup Inventory Item:
+	https://freesound.org/people/TriqyStudio/sounds/467605/
