@@ -34,23 +34,18 @@ void AAGDArmourLoot::EquipLoot()
 		switch (ArmourType) {
 		case EArmourType::Head :
 			AGDCharacter->GetMesh()->SetSkeletalMesh(GearMesh);
-			AGDCharacter->GetMesh()->SetRelativeTransform(RelativeTransform);
 			break;
 		case EArmourType::UpperBody :
 			AGDCharacter->UpperBodyComponent->SetSkeletalMesh(GearMesh);
-			AGDCharacter->UpperBodyComponent->SetRelativeTransform(RelativeTransform);
 			break;
 		case EArmourType::LowerBody:
 			AGDCharacter->LowerBodyComponent->SetSkeletalMesh(GearMesh);
-			AGDCharacter->LowerBodyComponent->SetRelativeTransform(RelativeTransform);
 			break;
 		case EArmourType::Hands:
 			AGDCharacter->HandsComponent->SetSkeletalMesh(GearMesh);
-			AGDCharacter->HandsComponent->SetRelativeTransform(RelativeTransform);
 			break;
 		case EArmourType::Feet:
 			AGDCharacter->FeetComponent->SetSkeletalMesh(GearMesh);
-			AGDCharacter->FeetComponent->SetRelativeTransform(RelativeTransform);
 			break;
 		default:
 			break;
