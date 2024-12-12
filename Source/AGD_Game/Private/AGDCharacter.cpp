@@ -14,6 +14,8 @@ AAGDCharacter::AAGDCharacter()
 void AAGDCharacter::FaceOtherActor(AActor* OtherActor)
 {
 	// Get other actor location
+	if (!OtherActor->IsValidLowLevel()) { return; }
+
 	FVector OtherActorLocation = OtherActor->GetActorLocation();
 
 	// Get new actor rotation
