@@ -1,44 +1,68 @@
-Spider hurt sound:
+AUDIO:
+------
+Spider Hurt Sound:
 	https://freesound.org/people/kongg_/sounds/672710/
-Spider die sound:
+Spider Die Sound:
 	https://freesound.org/people/kongg_/sounds/672712/
-Spider burst sound:
+Spider Burst Sound:
 	https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=83760
-Hurt sound player:
+Hurt Sound Player:
 	https://freesound.org/people/Volvion/sounds/609784/
-Bones:
+Bone Sound:
 	https://freesound.org/people/spookymodem/sounds/202091/
-Scream:
+Scream Sound:
 	https://freesound.org/people/filippys/sounds/698876/
-Hit Bones:
+Hit Bone Sound:
 	https://freesound.org/people/CaptainYulef/sounds/641236/
-Magic sound:
+Magic Sound:
 	https://freesound.org/people/qubodup/sounds/740776/s
-Sword hit:
+Sword Hit Sound:
 	https://freesound.org/people/marb7e/sounds/620355/
-Level up:
+Level Up Sound
 	https://freesound.org/people/copyc4t/sounds/141695/
-Ice wind:
+Ice Wind Sound:
 	https://freesound.org/people/NoahBangs/sounds/636085/
-Lava rock:
+Lava Rock Sound:
 	https://freesound.org/people/Robinhood76/sounds/246150/
-Fireball:
+Fireball Sound:
 	https://freesound.org/people/JoelAudio/sounds/77691/
-Added noise:
+Ability Background Sound 1:
 	https://freesound.org/people/colorsCrimsonTears/sounds/563536/
-Added noise 2:
+Ability Background Sound 2:
 	https://freesound.org/people/Robinhood76/sounds/246150/
-Dragon vocals:
+Dragon Vocals:
 	Alien Snake Roars Sound.ogg by Mastersoundboy2005 -- https://freesound.org/s/678485/ -- License: Creative Commons 0
-Magic door:
+Magic Door Sound:
 	https://freesound.org/people/NoahBangs/sounds/636087/?
-Drop/Pickup Inventory Item:
+Drop / Pickup Inventory Item Sound:
 	https://freesound.org/people/TriqyStudio/sounds/467605/
+Gravestone Smash Sound:
+	https://pixabay.com/users/lordsonny-38439655/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=194553
+Magic Door Increment:
+	https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=95072
+
+Stylized Environment Pack:
+	https://www.fab.com/listings/ba992476-1ad4-4138-b2b0-abc92326fa6e
+Stylized Fantasy Provencal:
+	https://www.fab.com/listings/ced19ea1-31ed-437f-ae64-2b6b1561fede
+Dragon for Boss Monster : Handpainted:
+	https://www.fab.com/listings/d156922e-0e05-4251-baa7-ad0deb74fe12
+RPG Orchestral Essentials (Free Sample):
+	https://www.fab.com/listings/09989cf6-d9ff-4e37-ac41-3626934b8948
+FX Variety Pack:
+	https://www.fab.com/listings/53531e17-369f-4bba-b493-8588f0dec07b
+Basic Pickups VFX Set (Niagara):
+	https://www.fab.com/listings/166d8257-d5af-4b8d-bd6c-1ea6d761b07e
+Mega Magic VFX Bundle:
+	https://www.fab.com/listings/d0b1351a-acbf-4da6-ab4e-32fc934a255f
+Infinity Blade Effects:
+	Link no longer available on Fab.
+Async Loading Screen:
+	https://www.fab.com/listings/f8aabb9a-7c96-4f79-97ff-04bcc146e595
+
+Additional models and assets provided by course.
+
 Gravestone Model:
 	https://www.cgtrader.com/items/5215999/download-page
-Gravestone Smash:
-	Sound Effect by <a href="https://pixabay.com/users/lordsonny-38439655/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=194553">LordSonny</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=194553">Pixabay</a>
 Meteor Image:
 	https://d.newsweek.com/en/full/2276155/meteoroid-falling-toward-earth.jpg?w=1200&f=cc298b086557ae9e76db3d88228c7e92
-Magic door increment:
-	Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=95072">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=95072">Pixabay</a>
