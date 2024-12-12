@@ -66,3 +66,5 @@ Gravestone Model:
 	https://www.cgtrader.com/items/5215999/download-page
 Meteor Image:
 	https://d.newsweek.com/en/full/2276155/meteoroid-falling-toward-earth.jpg?w=1200&f=cc298b086557ae9e76db3d88228c7e92
+Ice Image:
+	https://thumb.ac-illust.com/6d/6d7d67fdf636abcf95fcd61ca59e994e_w.jpeg
